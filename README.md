@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Instagram Viewer
 
-## Getting Started
+## 🔧 Tech Stack Used
 
-First, run the development server:
+- **Framework**: [Next.js](https://nextjs.org/) (React-based Full Stack Framework)
+- **Auth & API**: Instagram Graph API (OAuth2.0 + Graph API endpoints)
+- **Styling**: Tailwind CSS
+- **Deployment**: Vercel
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Why Next.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Next.js was chosen for its React foundation, integrated server-side rendering and API routes simplifying the Instagram OAuth flow and API calls without a separate Express server, performance and developer efficiency, and seamless deployment with Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🚀 Features Implemented
 
-To learn more about Next.js, take a look at the following resources:
+### 1. ✅ Instagram Login (OAuth Flow)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Secure OAuth2 authentication via Instagram Graph API (Business Account).
+- Redirects and token exchange handled on the server via Next.js API route.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 2. 👤 User Profile Info
 
-## Deploy on Vercel
+- Displays user's Instagram business profile data:
+  - Username
+  - Profile picture
+  - Account details
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. 🖼️ User Feed (Media Fetch)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Lists posts (images/videos) pulled from the user feed.
+- Optimized layout with responsive design.
+
+### 4. 💬 Comment Reply Feature
+
+- Users can view comments on their posts.
+- Reply to comments using the Instagram Comment API.
+
+---
+
+## 🧪 How to Test
+
+1. Visit the [live demo](https://instagram-viewer-rho.vercel.app/)
+2. Click “Login with Instagram”
+3. Grant permissions
+4. Explore profile details, posts, and try replying to comments
+
+---
+
+## 📸 Demo Video
+
+[Watch](https://loom.com/your-demo) the tool in action.
