@@ -22,7 +22,7 @@ export function useUserFeed() {
           const data = await response.json();
           setFeed(data.data as Media[]);
         }
-      } catch (error: any) {
+      } catch (_error) {
         //console.error("Error fetching user feed:", error);
         setFeedError("Failed to fetch user feed.");
       } finally {

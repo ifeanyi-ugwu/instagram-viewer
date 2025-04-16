@@ -4,7 +4,7 @@ import type { Comment } from "./types";
 // this was created because of an inconsistency in the instagram api structure
 // i.e, it returns replies as top level comments and even if i returned the replies edge, it would miss the
 // from object entirely (perhaps it's a depth limit from instagram)
-export const organizeComments = (commentsList: any[]): Comment[] => {
+export const organizeComments = (commentsList: Comment[]): Comment[] => {
   // First, create a map of all comments by ID for easy lookup
   const commentsMap = new Map();
 

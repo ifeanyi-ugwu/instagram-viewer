@@ -32,7 +32,7 @@ export async function GET(
 
     const data = await response.json();
     return NextResponse.json(data);
-  } catch (error) {
+  } catch (_error) {
     //console.error("Error fetching comments:", error);
     return NextResponse.json(
       { error: "Failed to fetch comments" },
@@ -86,7 +86,7 @@ export async function POST(
 
     const responseData = await response.json();
     return NextResponse.json({ success: true, id: responseData.id });
-  } catch (error) {
+  } catch (_error) {
     //console.error("Error posting comment:", error);
     return NextResponse.json(
       { error: "Failed to post comment" },

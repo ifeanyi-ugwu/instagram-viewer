@@ -25,7 +25,7 @@ export async function GET(req: NextRequest) {
 
     const data = await response.json();
     return NextResponse.json(data, { status: 200 });
-  } catch (error) {
+  } catch (_error) {
     //console.error("Error during Instagram profile fetch on server:", error);
     return NextResponse.json(
       { error: "Internal server error while fetching Instagram profile." },

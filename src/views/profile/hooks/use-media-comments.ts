@@ -39,7 +39,7 @@ export function useMediaComments(media?: Media | null) {
         //console.log({ data });
         setComments(organizeComments(data.data));
       }
-    } catch (error: any) {
+    } catch (_error) {
       //console.error("Error fetching comments:", error);
       setCommentsError("Failed to fetch comments.");
     } finally {
@@ -68,7 +68,7 @@ export function useMediaComments(media?: Media | null) {
       const data: { id: string } = await response.json();
       //console.log("Comment posted successfully:", data);
       return { success: true, response: data };
-    } catch (error: any) {
+    } catch (_error) {
       //console.error("Error posting comment:", error);
       return { success: false };
     }
@@ -134,7 +134,7 @@ export function useMediaComments(media?: Media | null) {
       const data: { id: string } = await response.json();
       //console.log("Reply posted successfully:", data);
       return { success: true, response: data };
-    } catch (error: any) {
+    } catch (_error) {
       //console.error("Error posting reply:", error);
       return { success: false, response: null };
     }

@@ -81,7 +81,7 @@ export async function POST(
 
     const responseData = await response.json();
     return NextResponse.json({ success: true, id: responseData.id });
-  } catch (error) {
+  } catch (_error) {
     //console.error("Error posting reply:", error);
     return NextResponse.json(
       { error: "Failed to post reply" },

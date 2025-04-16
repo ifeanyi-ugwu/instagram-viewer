@@ -33,7 +33,7 @@ export function useProfileHeader() {
         const data: InstagramProfile = await response.json();
         setInstagramProfile(data);
       }
-    } catch (error: any) {
+    } catch (_error) {
       //console.error("Error fetching Instagram profile:", error);
       setError("Failed to fetch Instagram profile data.");
     } finally {
